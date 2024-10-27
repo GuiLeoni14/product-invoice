@@ -50,6 +50,7 @@ public class Invoice {
 		for (Item item : itens) {
 			totalCost+= item.getPrice();
 		}
+		System.out.print("\n Total da compra: " + totalCost);
 	}
 	
 	public void execute() {
