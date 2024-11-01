@@ -6,8 +6,11 @@ import java.util.List;
 public class Sale {
 	private List<SaleItem> items = new ArrayList<SaleItem>();
 	
-	public void addSaleItem(SaleItem saleItem) {
-		this.items.add(saleItem);
+	public void createSaleItem(String code, int quantity) {
+		SaleItem item = new SaleItem();
+		item.createProduct(code, quantity);
+		
+		items.add(item);
 	}
 	
 	public double getTotal() {
@@ -16,5 +19,15 @@ public class Sale {
 			total += saleItem.getSubtotal();
 		}
 		return total;
+	}
+	
+	public List<String> getItems(){
+		List<String> itemsStr = new ArrayList<>();
+		
+		for (SaleItem salteItem : items) {
+			System.out.print(salteItem);
+		}
+		
+		return itemsStr;
 	}
 }
