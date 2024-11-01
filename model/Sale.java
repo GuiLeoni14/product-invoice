@@ -5,6 +5,11 @@ import java.util.List;
 
 public class Sale {
 	private List<SaleItem> items = new ArrayList<SaleItem>();
+	private double amountToPaid;
+	
+	public void pay(PaymentMethod paymentMethod) {
+		this.amountToPaid = paymentMethod.pay(this.getTotal());	
+	}
 	
 	public void createSaleItem(String code, int quantity) {
 		SaleItem item = new SaleItem();
