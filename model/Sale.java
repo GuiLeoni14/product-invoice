@@ -6,6 +6,8 @@ import java.util.List;
 public class Sale {
 	private List<SaleItem> items = new ArrayList<SaleItem>();
 	
+	private PaymentMethod paymentMethod;
+	
 	public void pay(PaymentMethod paymentMethod) {
 		paymentMethod.pay(this.getTotal());	
 		paymentMethod.describeMethod();

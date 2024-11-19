@@ -11,9 +11,13 @@ public class Main {
 		sale.createSaleItem("ff", 1);
 		sale.createSaleItem("msa", 2);
 		
+		// sale.setPayment();
+		
 		for (String item : sale.getItems()) {
 			System.out.print(item);
 		}
+		
+		// sale.getFinalPrice();
 	}
 
 }
