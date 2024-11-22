@@ -1,8 +1,13 @@
 package model;
 
 public class Product {
+	private String code;
 	private String description;
 	private double price;
+	
+	public Product(String code) {
+		this.code = code;
+	}
 
 	public String getDescription() {
 		return description;
@@ -18,5 +23,9 @@ public class Product {
 
 	public Double getPrice() {
 		return price;
+	}
+	
+	public String getCode() {
+		return code;
 	}
 }
